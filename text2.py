@@ -40,3 +40,17 @@ print(m)
 # re.search 扫描整个字符串。返回第一个 失败None
 # re.findall 返回一个列表，失败空列表
 # re.finditer 返回迭代器
+
+# re替换
+# text.replace
+# re.sub
+# re.subn
+
+text4 = 'Today is 11/27/2012. PyCon starts 3/13/2013.'
+re.sub(r'(\d+)/(\d+)/(\d+)',r'\3-\1-\2',text4)
+
+re.sub(r'(?P<month>\d+)/(?P<day>\d+)/(?P<year>\d+)',r'\g<year>-\g<month>-\g<day>',text4)
+
+# 忽略大小写 re.IGNORECASE
+
+# 还有一个分割 re.split
